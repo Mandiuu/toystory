@@ -19,6 +19,10 @@ model-viewer {
   height: 90%;
   /* background-color: #ffffff; */
 }
+#rotatingCarModel {
+  transform: translateY(-50px); /* Adjust the value as needed */
+}
+
 
 .Hotspot {
   background: #fff;

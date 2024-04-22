@@ -68,12 +68,12 @@
       This is the story of a baby born in Italy in September 2022. Shortly after his birth, he and his parents moved
        to New York City, and they managed to bring only a few of his toys in their suitcase.
     </p>
-    <p>He is now 19 months old, and 50% of his life has been in the US. He can say some words in English, like 
-      boat, door and dog. He also says some words in Italian, like mamma, papa and nonna. His collection of toys has grown and 
+    <p>He is now 20 months old, and 50% of his life has been in the US. He can say some words in English, like 
+      boat, car and dog. He also says some words in Italian, like mamma, papa and nonna. His collection of toys has grown and 
       now fills their family apartment in Manhattan.
     </p>
     <p>
-      Let's take a look at some of his favorite toys:
+      Let's take a look and play with some of his favorite toys:
     </p>
 
   
@@ -84,29 +84,30 @@
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <style>
       .full-width model-viewer {
-          max-width: 65%; /* Reducing width */
-          height: auto; /* Maintain aspect ratio */
-          margin: 0 auto; /* Center the viewer */
+          max-width: 90%; 
+          height: auto; 
+          margin: 0 auto; 
       }
       </style>
 
     <!-- 3d model stuff goes after here -->
 
-    <model-viewer src="plush.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" camera-orbit="-19.56deg 62.4deg 3.154m" field-of-view="30deg">
-      <button class="Hotspot" slot="hotspot-1" data-position="-0.2532122583586731m 0.471399375079228m -0.34490718801669584m" data-normal="-0.9645974581278242m -0.14307429184889486m -0.22154342866643026m" data-visibility-attribute="visible">
+<model-viewer src="plush.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" 
+poster="poster.webp" shadow-intensity="1" camera-orbit="-101.8deg 24.51deg 2.799m" field-of-view="29.92deg">
+<button class="Hotspot" slot="hotspot-1" data-position="-0.2532122583586731m 0.471399375079228m -0.34490718801669584m" data-normal="-0.9645974581278242m -0.14307429184889486m -0.22154342866643026m" data-visibility-attribute="visible">
           <div class="HotspotAnnotation">The baby doesn't know that this is a Pokemon</div>
       </button>
-      <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
-      </div>
-      <button slot="ar-button" id="ar-button">
-          View in your space
-      </button>
-      <div id="ar-prompt">
-          <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-      </div>
-  </model-viewer>
-  
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
+
     
     <!-- 3d model stuffgoes before here -->
 
@@ -117,9 +118,10 @@
       He likes to grab it and throw it around; Fuecoco is soft but can resist the baby's strength.
     </p>
     <p>
-      There is a reason why this colorful plush toy is so attractive to him, and the Toy Designer Suhasini Paul explains it: "kids like 
+      There is a reason why this colorful plush toy is so attractive to him, and the Toy Designer <a href="https://www.suhasinipaul.com/">Suhasini Paul</a> explains it: "kids like 
       the organic shapes and primary colors: red, blue, yellow and high contrast black & white attract them."
     </p>
+  </div>
     
       <!-- 3d model stuff goes after here -->
   
@@ -140,17 +142,115 @@
           </div>
         </model-viewer>
       </div>
-  
+    </div>
 
 
       <!-- 3d model stuffgoes before here -->
 
-
+  <div class="content">
+    <p>
+      The best sign that a toy is a favorite is that it is damaged. The  wooden hedgehog is holding up, but the plastic ball 
+      is dented after so many tosses in the air. 
+      "He likes the colors, especially the sound of the ball when it moves, so he uses it all day," says his mom. 
+    </p>
+    <p>
+      The baby calls this toy "palla," which means ball in Italian. This palla is giving it all to avoid breaking completely. 
+    </p>
   </div>
+   
+      <!-- 3d model stuff goes after here -->
+
+      <style>
+        #rotatingCarModel {
+          transform: translateY(-80px); 
+        }
+      </style>
+
+      <model-viewer id="rotatingCarModel" src="taxi.glb" ar ar-modes="webxr scene-viewer quick-look"
+       tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" camera-orbit="-185.5deg 40.76deg 0.5m" 
+       field-of-view="30deg" auto-rotate rotation-per-second="45deg"></model-viewer>
+
+      
+      <script>
+      const carModel = document.querySelector('#rotatingCarModel');
+      
+      function zoomIn() {
+        let orbit = carModel.getCameraOrbit();
+        carModel.cameraOrbit = `${orbit.theta}rad ${orbit.phi}rad ${Math.max(0.1, orbit.radius - 0.1)}m`;
+        carModel.jumpCameraToGoal();
+      }
+      
+      function zoomOut() {
+        let orbit = carModel.getCameraOrbit();
+        carModel.cameraOrbit = `${orbit.theta}rad ${orbit.phi}rad ${orbit.radius + 0.1}m`;
+        carModel.jumpCameraToGoal();
+      }
+      </script>
+
+      <script>
+      function toggleAutoRotate() {
+        const rotatingModel = document.querySelector('#rotatingModel');
+        rotatingModel.toggleAttribute('auto-rotate'); // This will toggle the auto-rotate attribute on and off
+      }
+      </script>
+
+
+    </div>
+
+      <!-- 3d model stuffgoes before here -->
+
+      <div class="content">
+        
+        <p>
+          When they took the baby out for a ride in his stroller, he would point at the cars on the street—especially the bright yellow cabs. 
+          "We wanted to give him a toy taxi car to get used to his new country. 
+          And he loves seeing his life-size toy on the street."
+        </p>
+      </div>    
+
+         <!-- 3d model stuff goes after here -->
+  
+    
+         <div class="full-width">
+          <model-viewer src="tiger.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" camera-orbit="154.3deg 120.2deg 2.104m" field-of-view="30deg">
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">
+                View in your space
+            </button>
+            <div id="ar-prompt">
+                <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+            </div>
+        </model-viewer>
+        </div>
+      </div>
+  
+  
+        <!-- 3d model stuffgoes before here -->
+
+
+        <div class="content">
+        
+          <p>
+           He's still to young to play with small pieces os lego, but he can play with a big tigger. And is only one from a bigger collection of lego animals.
+          </p>
+          <p>"I recommend a mix of toys which impart various developmental benefits and give children joy while playing. 
+            Like stacking toys, colour & shape sorter," says the expert Suhasini Paul. </p>
+
+            <p>His father knows that many that in a couple of years, his baby won't even look at this toys.
+              "But for now, they are his New York toys, and they make sense of why we are here." </p>
+        </div>   
+
+
+
+
+ 
 </div>
+
   <div class="footer">
     <div class="content">
-      <p>You can find the code for this template <a href="https://github.com/jsoma/page-templates/">here</a>.
+      <p>Look at my playful code <a href="https://github.com/Mandiuu/toystory/">here</a>.
       </p>
     </div>
   </div>
