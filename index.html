@@ -120,31 +120,27 @@
       There is a reason why this colorful plush toy is so attractive to him, and the Toy Designer Suhasini Paul explains it: "kids like 
       the organic shapes and primary colors: red, blue, yellow and high contrast black & white attract them."
     </p>
-  
-
-
-    <div class="full-width">
-
-  
+    
       <!-- 3d model stuff goes after here -->
   
     
-      
-    <model-viewer src="erizo.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" camera-orbit="-1080deg 85.46deg 0.3623m" field-of-view="30deg">
-      <button class="Hotspot" slot="hotspot-1" data-position="-0.0011178607270810326m 0.05735061720944751m 0.017075953003553246m" data-normal="-0.6828033301242555m 0.012853693128539498m 0.7304891477251283m" data-visibility-attribute="visible">
-          <div class="HotspotAnnotation">A small plastic ball has a limited resistance to knocks.</div>
-      </button>
-      <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
+      <div class="full-width">
+        <model-viewer src="erizo.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" camera-orbit="-1080deg 85.46deg 0.3623m" field-of-view="30deg">
+          <button class="Hotspot" slot="hotspot-1" data-position="-0.0011178607270810326m 0.05735061720944751m 0.017075953003553246m" data-normal="-0.6828033301242555m 0.012853693128539498m 0.7304891477251283m" data-visibility-attribute="visible">
+              <div class="HotspotAnnotation">A small plastic ball has a limited resistance to knocks.</div>
+          </button>
+          <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+          </div>
+          <button slot="ar-button" id="ar-button">
+              View in your space
+          </button>
+          <div id="ar-prompt">
+              <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+          </div>
+        </model-viewer>
       </div>
-      <button slot="ar-button" id="ar-button">
-          View in your space
-      </button>
-      <div id="ar-prompt">
-          <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-      </div>
-  </model-viewer>
-
+  
 
 
       <!-- 3d model stuffgoes before here -->
